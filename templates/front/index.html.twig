@@ -1,22 +1,31 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Catalogue de logiciels {% endblock %}
+{% block title %}Catalogue de logiciels{% endblock %}
 
 {% block header %}{% include "front/navbarfront.html.twig" %}{% endblock %}
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
+<h1>Catalogue de logiciel</h1>
 
-<div class="example-wrapper">
-    <h1>Bienvenue sur SoftDown</h1>
-    <ul>
-        <li><a href="">Mon Profil</a></li>
-        <li><a href="">Mes Formations</a></li>
-        <li><a href="">Mes Missions</a></li>
-    </ul>
-    
-</div>
+    <div class="container-fluid">
+        <div class="row row-cols-1 row-cols-md-2">
+            {% for category in categories %}
+                <div class="col mb-4">
+                    <div class="card">
+                        <div class="card-header text-center">
+                            <i class="fa fa-user-o fa-sizer" aria-hidden="true"></i> {{ category.name }}
+                        </div>
+                        <div class="card-body text-center">
+                            <img class="w128max" src="{{ asset('app/images/' ~ category.image) }}" alt="{{ category.name }}" >
+                        </div>
+                        <div class="card-footer text-center">
+                            <a class="btn btn-primary btn-sm" href="{{ path('front_category_show', {'id': category.id}) }}" role="button">Voir</a>
+                        </div>
+                    </div>
+                </div>   
+            {% else %}
+            Aucunue donnée catégorie.            
+            {% endfor %}
+        </div>
+    </div>
 {% endblock %}

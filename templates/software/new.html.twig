@@ -1,11 +1,11 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}New Software{% endblock %}
+{% block title %}Nouveau logiciel{% endblock %}
 
 {% block body %}
-    <h1>Create new Software</h1>
+    <h1>Ajoutez un logiciel</h1>
 
     {{ include('software/_form.html.twig') }}
 
-    <a href="{{ path('software_index') }}">back to list</a>
+    <a class="btn btn-secondary btn-sm" href="{{ path('software_index') }}" type=button>Retour à la liste des Logiciels</a>
 {% endblock %}

@@ -29,8 +29,10 @@
                 <td>{{ software.fileSize }}</td>
                 <td><img class="w64max" src="{{ asset('app/images/' ~ software.image) }}" alt="{{ software.name }}" ></td>
                 <td>
-                    <a href="{{ path('software_show', {'id': software.id}) }}">show</a>
-                    <a href="{{ path('software_edit', {'id': software.id}) }}">edit</a>
+                <div class="card-footer text-center">
+                    <a class="btn btn-primary btn-sm" href="{{ path('software_show', {'id': software.id}) }}" role="button">Voir</a>
+                    <a class="btn btn-warning btn-sm" href="{{ path('software_edit', {'id': software.id}) }}" role="button">Modifier</a>
+                </div>
                 </td>
             </tr>
         {% else %}
@@ -41,5 +43,5 @@
         </tbody>
     </table>
 
-    <a href="{{ path('software_new') }}">Create new</a>
+    <a href="{{ path('software_new') }}" class="btn btn-primary btn-sm mb-2 button_resp" role="button">Ajouter un logiciel</a>
 {% endblock %}

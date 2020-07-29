@@ -9,7 +9,7 @@ html{
     scroll-behavior: smooth;
 } 
 body{
-    background:darkcyan; 
+    background:rgb(245, 255, 186); 
     font-family: 'Montserrat', sans-serif;
     font-size:95%; 
     height:100%;  
@@ -162,6 +162,9 @@ img.picto_60x60{
     align-items:center;
     justify-content:center;
     height:100vh;
+}
+.btn-delete{
+    margin-top:10px;
 }
 @media screen and (max-width: 989px) {
     a.button_resp{ 

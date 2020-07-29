@@ -1,13 +1,14 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Edit Software{% endblock %}
+{% block title %}Modifier le logiciel{% endblock %}
 
 {% block body %}
-    <h1>Edit Software</h1>
+    <h1>Modifier {{ software.name }}</h1>
 
     {{ include('software/_form.html.twig', {'button_label': 'Update'}) }}
 
-    <a href="{{ path('software_index') }}">back to list</a>
-
-    {{ include('software/_delete_form.html.twig') }}
+    <a class="btn btn-secondary btn-sm" href="{{ path('software_index') }}" type=button>Retour à la liste des Logiciels</a>
+    <div class="btn-delete">
+        {{ include('software/_delete_form.html.twig') }}
+    </div>
 {% endblock %}
