@@ -2,11 +2,23 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
+        <title>{% block title %}Catalogue de logiciels{% endblock %}</title>
         {% block stylesheets %}{% endblock %}
+        {{ encore_entry_link_tags('app') }}
     </head>
     <body>
-        {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
+        <div id="page">
+            <header class="shadow">{% block header %}{% include "navbar.html.twig" %}{% endblock %}</header>
+            <main>
+                {% block body %}{% endblock %}
+                <div id="push"></div>
+            </main>
+        </div>        
     </body>
+    <footer class="navbar">
+        <p class="text-center">&copy; Luis Rodriguez 2020</p>
+    </footer>
+    {% block javascripts %}
+        {{ encore_entry_script_tags('app') }}
+    {% endblock %}
 </html>

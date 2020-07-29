@@ -1,0 +1,204 @@
+@import "~bootstrap/scss/bootstrap";
+
+* {
+    -moz-box-sizing: border-box; 
+    box-sizing: border-box;
+}
+html{
+    height:100%;
+    scroll-behavior: smooth;
+} 
+body{
+    background:darkcyan; 
+    font-family: 'Montserrat', sans-serif;
+    font-size:95%; 
+    height:100%;  
+    display:flex;
+    flex-direction:column;
+    margin:0; 
+    padding:0 0 0;
+}
+footer {
+    background:#343a40;
+    height:40px;   
+    flex-shrink: 0; 
+}
+footer p{
+    width:100%;
+    color:#ccc;
+    font-size:0.8em;
+    text-align:center;
+    padding:4px 0;
+}
+main{
+    padding:40px;
+}
+#page {
+    background:#fff;
+    flex: 1 0 auto;
+    width:80%; 
+    display:block;  
+    border-radius:4px;
+    margin:80px auto;
+}
+nav a img {
+    margin-left:8px;
+    width:180px;
+}
+.jumbotron{ 
+    width:auto;
+    height:270px;
+    margin:0 0 40px;
+    padding:0;
+    -webkit-background-size: 100% auto;
+    -moz-background-size: 100% auto;
+    -o-background-size: 100% auto;
+    background-size: 100%  auto;
+}
+.jumbotron h1{
+    color:#fff;
+    text-align:center;
+    padding-top:100px;
+    font-size:4em;
+    margin-bottom:0;
+    padding-bottom:0;
+    padding-top:70px;
+}
+.jumbotron p{ 
+    color:#fff;
+    text-align:center; 
+    font-size:2em;
+}
+#totop {
+    font-size:1.2em;
+    display: none; 
+    position: fixed; 
+    bottom: 20px;
+    right: 20px;
+    z-index: 999999;
+    padding:15px 20px;
+    border-radius:4px;
+    color:rgba(255, 255, 255, 0.8);
+    background: rgba(0,0,0,0.4);
+    cursor: pointer; 
+}
+.fa-sizer{
+    margin-right:10px;
+    color:#666;
+}
+#totop:hover {
+    background:rgba(0, 0, 0, 0.7);
+}
+h1{ 
+    font-weight:200;
+    font-size:1.8em;
+    text-align:center;
+    padding:20px 0;
+}
+
+.w250max{
+    max-width: 250px;
+} 
+
+.w128max{
+    max-width: 128px;
+}
+.w64max{
+    max-width: 64px;
+}
+
+.logologin {
+  -webkit-filter: invert(100%);
+}
+
+.logname{
+    position: absolute;
+    right: 30px;
+}
+ 
+table th{
+    font-weight:400;
+    background-color:#ccc
+}
+span.id{
+    display:inline-block;
+    padding:4px 12px;
+    margin-right:5px;
+    border-radius:4px;
+    background:#fff;
+    border:1px solid #ccc;
+}
+.btn-group{
+    margin :10px 0;
+}
+button.btn{  
+    border-radius:0px; 
+ }
+.card-header,
+.card-footer{ 
+    border-radius: 4px;
+}
+img.picto_60x60{
+    width:80px;
+    height:auto;
+}
+#login{
+    display:block;
+    background:#fff;
+    border-radius:4px;
+    padding:40px;
+    max-width:30%;
+    margin-top:-150px;
+}
+#login label{
+    padding:10px 0 0;
+}
+#login button{
+    margin:20px 0;
+}
+.plain_body{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    height:100vh;
+}
+@media screen and (max-width: 989px) {
+    a.button_resp{ 
+        width:100%;
+    } 
+    #login{
+        padding:20px;
+        max-width:90%;
+    }
+}
+@media screen and (min-width: 768px) and (max-width: 989px){
+    .jumbotron{
+        width:auto;
+        height:200px;
+        text-align:center;
+    }
+    .jumbotron h1{
+        display:inline-block;
+        font-size:2.5em;
+        padding-top:40px;
+        margin-bottom:0;
+        padding-bottom:0;
+    } 
+    .jumbotron p{
+        display:inline-block;
+        font-size:1.5em;
+        padding-top:40px;
+    }
+    #login{
+        padding:20px;
+        max-width:50%;
+    }
+}
+@media screen and (min-width: 990px) and (max-width: 1160px){
+    #login{
+        padding:20px;
+        max-width:50%;
+    }
+}
+

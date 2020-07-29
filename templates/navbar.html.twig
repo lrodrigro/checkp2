@@ -1,0 +1,38 @@
+    {% block header %}
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark fixed-top shadow-sm">
+        <a class="navbar-brand" href="/admin/">
+            <img src="" alt="Image">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" 
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent"> 
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link text-light" href="/admin/"><i class="fas fa-home"></i></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="{{ path('software_index') }}">Logiciel</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="{{ path('category_index') }}">Catégories</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-light" href="#" id="navbarDropdownMenuLink" 
+                    role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Options
+                    </a>
+                    <div class="dropdown-menu bg-dark" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="nav-link text-light" href="/admin/faq/">Faq</a>
+                        <a class="nav-link text-light" href="/admin/language/">Langue</a>
+                        <a class="nav-link text-light" href="/admin/country/">Pays</a>
+                        <a class="nav-link text-light" href="/admin/place/">Région</a>
+                    </div>
+                </li>               
+            </ul>
+        </div>
+    </nav>
+    {% endblock %}
+
